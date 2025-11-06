@@ -21,7 +21,7 @@ export default function SideNavWithBurger() {
       {/* Close Icon */}
       <button
         onClick={toggleNav}
-        className={`fixed top-6 left-64 bg-transparent border-none text-orange-400 text-3xl cursor-pointer z-50 transition-all duration-300 ${
+        className={`fixed top-6 left-64 sm:left-54 max-[460px]:left-40 bg-transparent border-none text-orange-400 text-3xl cursor-pointer z-50 transition-all duration-300 ${
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}>
         <Close />
@@ -36,7 +36,7 @@ export default function SideNavWithBurger() {
 
       {/* Side Nav */}
       <nav
-        className={`fixed top-0 left-0 h-full bg-gradient-to-b from-[#1e1e1e] to-[#121212] text-white flex flex-col justify-between transition-all duration-500 ease-in-out z-50 shadow-2xl overflow-hidden ${
+        className={`fixed top-0 left-0 h-full bg-gradient-to-b from-[#1e1e1e] to-[#121212] text-white flex flex-col justify-between transition-all duration-500 ease-in-out z-40 shadow-2xl overflow-hidden ${
           isOpen ? 'w-[280px] p-8' : 'w-0 p-0'
         }`}>
         {/* Top Section */}
