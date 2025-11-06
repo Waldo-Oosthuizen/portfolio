@@ -104,14 +104,14 @@ export default function SideNavWithBurger() {
           <p className="text-sm text-gray-400 mb-3">Connect with me:</p>
           <div className="flex space-x-4 text-gray-300">
             <a
-              href="https://github.com/yourgithub"
+              href="https://github.com/Waldo-Oosthuizen"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-orange-400 transition-colors">
               GitHub
             </a>
             <a
-              href="https://linkedin.com/in/yourlinkedin"
+              href="https://www.linkedin.com/in/waldo-oosthuizen-8b4701234/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-orange-400 transition-colors">

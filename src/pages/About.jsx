@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGithub } from 'react-icons/fa';
 import { SiTailwindcss, SiFramer } from 'react-icons/si';
 import { FaFilePdf } from 'react-icons/fa';
+import cv from '/Waldo_CV.pdf';
 
 export default function About() {
   const techStack = [
@@ -72,7 +73,7 @@ export default function About() {
           viewport={{ once: true, amount: 0.3 }}
           className="flex justify-center md:justify-start mt-10">
           <a
-            href="/Waldo_CV.pdf"
+            href={cv}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-full font-medium hover:bg-orange-600 transition duration-300 shadow-md shadow-orange-500/20">

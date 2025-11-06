@@ -1,5 +1,6 @@
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { FaFilePdf } from 'react-icons/fa';
+import cv from '/Waldo_CV.pdf';
 
 export default function Footer() {
   return (
@@ -37,7 +38,7 @@ text-gray-300 py-12 border-t border-gray-800">
           {/* Call to Action */}
           <div className="text-center md:text-right">
             <a
-              href="/Waldo_CV.pdf"
+              href={cv}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-full font-medium hover:bg-orange-600 transition duration-300 shadow-md shadow-orange-500/20">
