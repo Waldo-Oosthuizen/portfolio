@@ -27,7 +27,7 @@ function App() {
             </>
           }
         />
-
+        {/* Projects Page */}
         <Route path="/projects" element={<Projects />} />
 
         {/* About Page */}
@@ -35,6 +35,9 @@ function App() {
 
         {/* Skills Page*/}
         <Route path="/skills" element={<Skills />} />
+
+        {/* Contact Page */}
+        <Route path="/contact" element={<Contact />} />
       </Routes>
 
       <Footer />
