@@ -87,7 +87,7 @@ export default function Skills() {
           <SkillCard
             icon={<FaGithub className="text-4xl text-gray-400" />}
             title="Tools & Workflow"
-            desc="Git, GitHub, VS Code, Agile"
+            desc="GitHub, VSCode"
           />
         </motion.div>
 
