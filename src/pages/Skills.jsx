@@ -15,7 +15,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className=" bg-gradient-to-b from-[#1e1e1e] to-[#121212] text-white px-8 ">
+      className=" bg-gradient-to-b from-[#1e1e1e] to-[#121212] text-white px-6 md:px-20 py-24">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <motion.div
