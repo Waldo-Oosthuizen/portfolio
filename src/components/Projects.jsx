@@ -7,7 +7,7 @@ const projects = [
     tech: ['React', 'TailwindCSS', 'Firebase', 'Firestore', 'Lucide Icons'],
     description:
       'A real-time attendance tracker for music teachers, developed with React and Firebase. Includes Google Authentication, Firestore syncing, and a responsive UI. Currently expanding with analytics and progress-tracking features.',
-    link: 'https://waldo-oosthuizen.github.io/attendio/#/',
+    link: 'https://waldo-oosthuizen.github.io/staccato/',
     github: 'https://github.com/Waldo-Oosthuizen/attendio',
     buttonText: 'Live Demo',
   },
