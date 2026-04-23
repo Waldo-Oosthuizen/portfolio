@@ -59,7 +59,7 @@ export default function About() {
             <>
               Hi, I’m{' '}
               <span className="text-orange-400 font-semibold">Waldo</span> — an
-              aspiring full stack developer and third-year{' '}
+              aspiring full stack software / web developer and third-year{' '}
               <span className="font-semibold">BSc IT student.</span> I build
               applications from interfaces to backend logic and enjoy solving
               real-world problems through software.
