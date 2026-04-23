@@ -1,19 +1,43 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGithub } from 'react-icons/fa';
-import { SiTailwindcss, SiFramer } from 'react-icons/si';
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaGithub,
+  FaPhp,
+  FaPython,
+  FaDatabase,
+  FaGitAlt,
+} from 'react-icons/fa';
+import { SiTailwindcss, SiFramer, SiCplusplus } from 'react-icons/si';
 import { FaFilePdf } from 'react-icons/fa';
 import cv from '/Waldo_CV.pdf';
 
 export default function About() {
   const techStack = [
+    // Frontend
     { name: 'HTML5', icon: <FaHtml5 /> },
     { name: 'CSS3', icon: <FaCss3Alt /> },
     { name: 'JavaScript', icon: <FaJs /> },
     { name: 'React', icon: <FaReact /> },
     { name: 'TailwindCSS', icon: <SiTailwindcss /> },
-    { name: 'Framer Motion', icon: <SiFramer /> },
+
+    // Backend / Programming
+    { name: 'PHP', icon: <FaPhp /> },
+    { name: 'Python', icon: <FaPython /> },
+    { name: 'C++', icon: <SiCplusplus /> },
+
+    // Database
+    { name: 'SQL', icon: <FaDatabase /> },
+
+    // Tools
+    { name: 'Git', icon: <FaGitAlt /> },
     { name: 'GitHub', icon: <FaGithub /> },
+
+    // UI Enhancement
+    { name: 'Framer Motion', icon: <SiFramer /> },
   ];
 
   return (
@@ -34,18 +58,22 @@ export default function About() {
           {[
             <>
               Hi, I’m{' '}
-              <span className="text-orange-400 font-semibold">Waldo</span> — a
-              front-end developer and second-year{' '}
-              <span className="font-semibold">BSc IT student</span> passionate
-              about building responsive, user-focused web experiences.
+              <span className="text-orange-400 font-semibold">Waldo</span> — an
+              aspiring full stack developer and third-year{' '}
+              <span className="font-semibold">BSc IT student.</span> I build
+              applications from interfaces to backend logic and enjoy solving
+              real-world problems through software.
             </>,
+
             <>
-              I love solving real-world problems with{' '}
-              <span className="text-orange-400">clean code</span> and{' '}
-              <span className="text-orange-400">thoughtful design</span>. I
-              enjoy working with React, TailwindCSS, and Framer Motion to create
-              web applications that feel smooth, interactive, and purposeful.
+              I enjoy working with technologies like{' '}
+              <span className="text-orange-400 font-semibold">React</span>,{' '}
+              <span className="text-orange-400 font-semibold">Python</span>,{' '}
+              <span className="text-orange-400 font-semibold">PHP</span>, and{' '}
+              <span className="text-orange-400 font-semibold">SQL</span> to
+              create systems that are reliable, responsive, and user-focused.
             </>,
+
             <>
               <span className="text-gray-400 italic">
                 When I’m not coding, I’m probably learning a new guitar riff 🎸,

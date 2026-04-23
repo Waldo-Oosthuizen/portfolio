@@ -6,7 +6,6 @@ import {
   FaJs,
   FaCloud,
   FaDatabase,
-  FaNetworkWired,
   FaGithub,
 } from 'react-icons/fa';
 import { SiTailwindcss, SiPhp } from 'react-icons/si';
@@ -41,66 +40,63 @@ export default function Skills() {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, staggerChildren: 0.1 }}
+          transition={{ duration: 0.4, staggerChildren: 0.1 }}
           viewport={{ once: true, amount: 0.3 }}
           className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
           <SkillCard
             icon={<FaPython className="text-4xl text-gray-400" />}
             title="Python"
-            desc="Object-Oriented Programming, Tkinter, SQLite"
+            desc="Object-Oriented Programming, Tkinter GUIs, SQLite integration"
           />
+
           <SkillCard
             icon={<FaJs className="text-4xl text-gray-400" />}
             title="JavaScript"
-            desc="ES6+, DOM manipulation, Interactivity"
+            desc="ES6+, DOM manipulation, interactive web functionality"
           />
+
           <SkillCard
             icon={<FaReact className="text-4xl text-gray-400" />}
             title="React"
-            desc="Routing, Components, State Management"
+            desc="Component-based UI, routing, state-driven applications"
           />
+
           <SkillCard
             icon={<SiTailwindcss className="text-4xl text-gray-400" />}
-            title="Frontend Design"
-            desc="HTML, CSS, Tailwind CSS"
+            title="Frontend Development"
+            desc="HTML, CSS, TailwindCSS, responsive design"
           />
+
           <SkillCard
             icon={<SiPhp className="text-4xl text-gray-400" />}
-            title="PHP & MySQL"
-            desc="Basic backend development"
+            title="Backend Development"
+            desc="PHP, form handling, authentication logic"
           />
-          <SkillCard
-            icon={<FaCloud className="text-4xl text-gray-400" />}
-            title="Cloud & Databases"
-            desc="AWS Cloud Practitioner, Firebase, SQLite"
-          />
-          <SkillCard
-            icon={<FaNetworkWired className="text-4xl text-gray-400" />}
-            title="Networking"
-            desc="IPv4/IPv6, Subnetting, Network Security"
-          />
+
           <SkillCard
             icon={<FaDatabase className="text-4xl text-gray-400" />}
             title="Database Management"
-            desc="CRUD, schema design, relational concepts"
+            desc="SQL, MySQL, SQLite, CRUD operations"
           />
+
+          <SkillCard
+            icon={<FaCloud className="text-4xl text-gray-400" />}
+            title="Cloud & Deployment"
+            desc="AWS Cloud Practitioner, Firebase, web hosting"
+          />
+
           <SkillCard
             icon={<FaGithub className="text-4xl text-gray-400" />}
             title="Tools & Workflow"
-            desc="GitHub, VSCode"
+            desc="Git, GitHub, VS Code, version control workflows"
+          />
+
+          <SkillCard
+            icon={<FaDatabase className="text-4xl text-gray-400" />}
+            title="Application Development"
+            desc="Full-stack applications, database-driven systems"
           />
         </motion.div>
-
-        {/* Closing Line */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="mt-12 text-center text-gray-400 italic">
-          “These skills form the foundation of my projects like Attendio and
-          PayPro, where I bring ideas to life through code and creativity.”
-        </motion.p>
       </div>
     </section>
   );

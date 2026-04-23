@@ -12,40 +12,59 @@ export default function Home() {
       { text: ' =', color: 'text-white' },
       { text: ' "Waldo";', color: 'text-darkOrange' },
     ],
+
     [
       { text: 'const', color: 'text-darkBlue' },
-      { text: ' loves', color: 'text-blue' },
+      { text: ' role', color: 'text-blue' },
       { text: ' =', color: 'text-white' },
-      { text: ' [', color: 'text-darkYellow' },
-      { text: "'React', 'Tailwind', 'UI/UX'", color: 'text-darkOrange' },
-      { text: ']', color: 'text-darkYellow' },
+      { text: ' "Software Developer";', color: 'text-darkOrange' },
     ],
-    [
-      { text: 'function', color: 'text-darkBlue' },
-      { text: ' AboutMe', color: 'text-yellow' },
-      { text: '() ', color: 'text-darkYellow' },
-      { text: '{ return ', color: 'text-[#FFC0CB]' },
-      { text: '"Creative Dev"', color: 'text-darkOrange' },
-      { text: '; }', color: 'text-darkYellow' },
-    ],
-    [
-      { text: 'let', color: 'text-darkBlue' },
-      { text: ' passion', color: 'text-blue' },
-      { text: ' =', color: 'text-white' },
-      { text: ' "Building Interfaces";', color: 'text-darkOrange' },
-    ],
+
     [
       { text: 'const', color: 'text-darkBlue' },
-      { text: ' skills', color: 'text-blue' },
+      { text: ' frontend', color: 'text-blue' },
       { text: ' =', color: 'text-white' },
       {
-        text: ' ["React", "Next.js", "Tailwind", "Python", "C++"];',
+        text: ' ["HTML", "CSS", "React"];',
         color: 'text-darkOrange',
       },
     ],
+
+    [
+      { text: 'const', color: 'text-darkBlue' },
+      { text: ' backend', color: 'text-blue' },
+      { text: ' =', color: 'text-white' },
+      {
+        text: ' ["PHP", "C++"];',
+        color: 'text-darkOrange',
+      },
+    ],
+
+    [
+      { text: 'const', color: 'text-darkBlue' },
+      { text: ' database', color: 'text-blue' },
+      { text: ' =', color: 'text-white' },
+      {
+        text: ' ["SQL"];',
+        color: 'text-darkOrange',
+      },
+    ],
+
+    [
+      { text: 'function', color: 'text-darkBlue' },
+      { text: ' buildProject', color: 'text-yellow' },
+      { text: '() ', color: 'text-darkYellow' },
+      { text: '{ return ', color: 'text-[#FFC0CB]' },
+      { text: '"Full Application";', color: 'text-darkOrange' },
+      { text: ' }', color: 'text-darkYellow' },
+    ],
+
     [
       { text: 'console.log', color: 'text-darkBlue' },
-      { text: '("Welcome to my portfolio!")', color: 'text-darkOrange' },
+      {
+        text: '("Building systems, not just interfaces.");',
+        color: 'text-darkOrange',
+      },
     ],
   ];
 
@@ -53,7 +72,9 @@ export default function Home() {
     <section className="relative w-full overflow-hidden bg-[#1e1e1e] font-mono">
       <motion.div
         ref={heroRef}
-        className="relative flex flex-col items-center justify-center min-h-[80vh] text-center px-6 py-10">
+        className="relative flex flex-col items-center justify-center min-h-[100vh] text-center px-6 py-10 ">
+        {/* Blur Overlay for Mobile */}
+        <div className="absolute inset-0 backdrop-blur-[1px] sm:backdrop-blur-none z-10" />
         {/* Floating Code Background */}
         {floatingCode.map((line, index) => (
           <motion.div
@@ -72,7 +93,9 @@ export default function Home() {
             }}
             className="absolute text-xs md:text-sm font-mono z-0 text-gray-400/70 pointer-events-none"
             style={{
-              top: `${10 + index * 32}%`,
+              top: `${
+                window.innerWidth < 640 ? 8 + index * 16 : 8 + index * 12
+              }%`,
               left: `${index % 2 === 0 ? 8 : 65}%`,
               whiteSpace: 'nowrap',
             }}>
@@ -99,7 +122,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-lg md:text-2xl bg-gradient-to-r from-darkOrange to-darkYellow bg-clip-text text-transparent font-medium mb-8">
-            A Creative Front-End Developer
+            BSc IT Student | Full-Stack Developer
           </motion.p>
 
           <motion.img

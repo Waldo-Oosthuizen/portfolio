@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
-    title: 'Attendio',
+    title: 'Staccato',
     tech: ['React', 'TailwindCSS', 'Firebase', 'Firestore', 'Lucide Icons'],
     description:
       'A real-time attendance tracker for music teachers, developed with React and Firebase. Includes Google Authentication, Firestore syncing, and a responsive UI. Currently expanding with analytics and progress-tracking features.',
@@ -11,12 +11,20 @@ const projects = [
     github: 'https://github.com/Waldo-Oosthuizen/attendio',
     buttonText: 'Live Demo',
   },
+
+  {
+    title: 'Takealot Product Analytics Pipeline',
+    tech: ['Python', 'Selenium', 'BeautifulSoup', 'Pandas', 'Scikit-learn'],
+    description:
+      'Developed an automated data pipeline that scrapes product data from Takealot, cleans the dataset, and prepares it for predictive models to analyze pricing trends.',
+    github: 'https://github.com/Waldo-Oosthuizen/takealot_product_web_scraper',
+  },
   {
     title: 'PayPro',
     tech: ['PHP', 'HTML', 'CSS', 'Sessions'],
     description:
       'PayPro is a PHP-based finance simulator created during my 2nd-year IT degree. It lets users manage virtual balances, process payments with live fee calculations, and request refunds securely. Includes session-based balance management and transaction history tracking.',
-    link: 'https://paypro.xo.je/?i=1',
+    link: 'https://paypro.wuaze.com/',
     github: 'https://github.com/Waldo-Oosthuizen/paypro',
     buttonText: 'Live Demo',
   },
@@ -84,13 +92,18 @@ export default function PortfolioProjects() {
 
               {/* Buttons */}
               <div className="mt-auto flex gap-4">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 text-center px-5 py-2 bg-orange-500 text-white rounded-full font-medium hover:bg-orange-600 transition duration-300">
-                  {project.buttonText}
-                </a>
+                {/* Live Demo Button (only if link exists) */}
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center px-5 py-2 bg-orange-500 text-white rounded-full font-medium hover:bg-orange-600 transition duration-300">
+                    {project.buttonText || 'Live Demo'}
+                  </a>
+                )}
+
+                {/* GitHub Button */}
                 {project.github && (
                   <a
                     href={project.github}
