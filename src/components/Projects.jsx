@@ -3,6 +3,15 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
+    title: 'Loop',
+    tech: ['PHP', 'MySQL', 'JavaScript', 'HTML5', 'CSS3'],
+    description:
+      'A custom-built, full-stack event management platform developed from scratch. Features include secure user authentication with password hashing, CRUD event management, private messaging, and real-time search. Emphasizes backend security through prepared statements and rigorous session handling.',
+    link: 'https://waldowebdev.co.za/loop/',
+    github: '#',
+    buttonText: 'Live Demo',
+  },
+  {
     title: 'Staccato',
     tech: ['React', 'TailwindCSS', 'Firebase', 'Firestore', 'Lucide Icons'],
     description:
@@ -10,6 +19,13 @@ const projects = [
     link: 'https://waldo-oosthuizen.github.io/staccato/',
     github: 'https://waldo-oosthuizen.github.io/staccato/',
     buttonText: 'Live Demo',
+  },
+  {
+    title: 'NeoVerse',
+    tech: ['C++', 'STL', 'Data Structures', 'Algorithms', 'File I/O'],
+    description:
+      'A console-based AI City Survival engine designed for real-time municipal resource management. Built using C++ with a focus on optimized memory usage, custom class hierarchies for event handling, and algorithmic efficiency (Big-O analysis) to process complex city data.',
+    github: 'https://github.com/Waldo-Oosthuizen/neoverse',
   },
 
   {
@@ -35,7 +51,7 @@ const projects = [
       'A fully custom website for my own music education business. Showcases courses, lesson information, and contact forms for guitar, bass, ukulele, piano, and drums. Designed to strengthen brand identity and simplify new student onboarding.',
     link: 'https://fretnot-music-school.co.za/',
     github: 'https://github.com/Waldo-Oosthuizen/fretnotmusicschool',
-    buttonText: 'Live Website',
+    buttonText: 'Live site',
   },
 ];
 
