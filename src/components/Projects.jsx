@@ -7,7 +7,7 @@ const projects = [
     tech: ['PHP', 'MySQL', 'JavaScript', 'HTML5', 'CSS3'],
     description:
       'A custom-built, full-stack event management platform developed from scratch. Features include secure user authentication with password hashing, CRUD event management, private messaging, and real-time search. Emphasizes backend security through prepared statements and rigorous session handling.',
-    link: 'https://waldowebdev.co.za/loop/',
+    link: 'https://loop.waldowebdev.co.za/',
     github: '#',
     buttonText: 'Live Demo',
   },
@@ -40,7 +40,7 @@ const projects = [
     tech: ['PHP', 'HTML', 'CSS', 'Sessions'],
     description:
       'PayPro is a PHP-based finance simulator created during my 2nd-year IT degree. It lets users manage virtual balances, process payments with live fee calculations, and request refunds securely. Includes session-based balance management and transaction history tracking.',
-    link: 'https://waldowebdev.co.za/paypro/',
+    link: 'https://paypro.waldowebdev.co.za/',
     github: 'https://github.com/Waldo-Oosthuizen/paypro',
     buttonText: 'Live Demo',
   },
