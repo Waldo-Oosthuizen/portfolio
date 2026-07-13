@@ -13,7 +13,7 @@ import {
 } from 'react-icons/fa';
 import { SiTailwindcss, SiFramer, SiCplusplus } from 'react-icons/si';
 import { FaFilePdf } from 'react-icons/fa';
-import cv from '/Waldo_CV.pdf';
+// import cv from '/Waldo_CV.pdf';
 
 export default function About() {
   const techStack = [
@@ -100,12 +100,13 @@ export default function About() {
           transition={{ delay: 0.5, duration: 0.6 }}
           viewport={{ once: true, amount: 0.3 }}
           className="flex justify-center md:justify-start mt-10">
+          {''}{' '}
           <a
             href={cv}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-full font-medium hover:bg-orange-600 transition duration-300 shadow-md shadow-orange-500/20">
-            <FaFilePdf className="text-lg" />
+            <FaFilePdf className="text-lg" aria-disabled />
             View My CV
           </a>
         </motion.div>
