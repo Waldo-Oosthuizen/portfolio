@@ -32,7 +32,6 @@ text-gray-300 py-12 border-t border-gray-800">
               <FaGithub />
             </a>
           </div>
-          Call to Action
           <div className="text-center md:text-right">
             <a
               href={cv}
