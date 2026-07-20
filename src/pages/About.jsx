@@ -13,7 +13,7 @@ import {
 } from 'react-icons/fa';
 import { SiTailwindcss, SiFramer, SiCplusplus } from 'react-icons/si';
 import { FaFilePdf } from 'react-icons/fa';
-// import cv from '/Waldo_CV.pdf';
+import cv from '/Waldo_CV.pdf';
 
 export default function About() {
   const techStack = [

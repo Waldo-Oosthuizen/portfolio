@@ -15,9 +15,7 @@ text-gray-300 py-12 border-t border-gray-800">
               Waldo Oosthuizen
             </h2>
           </div>
-
           {/* Social Media Links */}
-
           <div className="flex gap-5 mb-6 md:mb-0">
             <a
               href="https://www.linkedin.com/in/waldo-oosthuizen-8b4701234/"
@@ -34,8 +32,7 @@ text-gray-300 py-12 border-t border-gray-800">
               <FaGithub />
             </a>
           </div>
-
-          {/* Call to Action 
+          Call to Action
           <div className="text-center md:text-right">
             <a
               href={cv}
@@ -45,7 +42,7 @@ text-gray-300 py-12 border-t border-gray-800">
               <FaFilePdf className="text-lg" />
               View My CV
             </a>
-          </div>*/}
+          </div>
         </div>
       </div>
 
