@@ -22,6 +22,21 @@ const projects = [
   },
 
   {
+    title: 'Loan Risk Prediction using Machine Learning',
+    tech: [
+      'Python',
+      'Pandas',
+      'Scikit-learn',
+      'NumPy',
+      'Matplotlib',
+      'Jupyter Notebook',
+    ],
+    description:
+      'Built an end-to-end machine learning pipeline to predict loan default risk using a real-world credit risk dataset. Performed data cleaning, feature engineering, one-hot encoding, feature scaling, PCA, and trained Logistic Regression, K-Nearest Neighbors, and Decision Tree models. Improved the best-performing Decision Tree model using GridSearchCV hyperparameter tuning, achieving 91.96% accuracy.',
+    github: 'https://github.com/Waldo-Oosthuizen/ML_Credit_Risk',
+  },
+
+  {
     title: 'NeoVerse',
     tech: ['C++', 'STL', 'Data Structures', 'Algorithms', 'File I/O'],
     description:
