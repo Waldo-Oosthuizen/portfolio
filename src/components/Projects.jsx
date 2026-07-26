@@ -8,7 +8,7 @@ const projects = [
     description:
       'A custom-built, full-stack event management platform developed from scratch. Features include secure user authentication with password hashing, CRUD event management, private messaging, and real-time search. Emphasizes backend security through prepared statements and rigorous session handling.',
     link: 'https://loop.waldowebdev.co.za/',
-    github: '#',
+    github: 'https://github.com/Waldo-Oosthuizen/Loop',
     buttonText: 'Live Demo',
   },
   {
@@ -20,6 +20,7 @@ const projects = [
     github: 'https://waldo-oosthuizen.github.io/staccato/',
     buttonText: 'Live Demo',
   },
+
   {
     title: 'NeoVerse',
     tech: ['C++', 'STL', 'Data Structures', 'Algorithms', 'File I/O'],
