@@ -32,7 +32,7 @@ const projects = [
       'Jupyter Notebook',
     ],
     description:
-      'Built a machine learning pipeline during my 2nd year of my studie that was built to predict loan risk using a credit risk dataset. Performed data cleaning, feature engineering, one-hot encoding, feature scaling, PCA, and trained Logistic Regression, K-Nearest Neighbors, and Decision Tree models. Improved the best-performing Decision Tree model using GridSearchCV hyperparameter tuning, achieving 91.96% accuracy.',
+      'A machine learning pipeline that was built during the 2nd year of my studies. Its purpose is to predict loan risk using a credit risk dataset. Performed data cleaning, feature engineering, one-hot encoding, feature scaling, PCA, and trained Logistic Regression, K-Nearest Neighbors, and Decision Tree models. Improved the best-performing Decision Tree model using GridSearchCV hyperparameter tuning, achieving 91.96% accuracy.',
     github: 'https://github.com/Waldo-Oosthuizen/ML_Credit_Risk',
   },
 
