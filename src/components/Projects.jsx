@@ -3,8 +3,14 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
-    title: 'Loop',
+    title: 'This Portfolio Website',
     tech: ['PHP', 'MySQL', 'JavaScript', 'HTML5', 'CSS3'],
+    description:
+      'Designed and developed a responsive portfolio website with a custom Express.js backend for secure contact form submissions. The application uses a REST API, server-side validation, SMTP email delivery, and rate limiting to replace third-party email services, demonstrating end-to-end full-stack development.',
+  },
+  {
+    title: 'Loop',
+    tech: ['React', 'Tailwind', 'Framer Motion', 'REST API', 'Express.js'],
     description:
       'A custom-built, full-stack event management platform developed from scratch. Features include secure user authentication with password hashing, CRUD event management, private messaging, and real-time search. Emphasizes backend security through prepared statements and rigorous session handling.',
     link: 'https://loop.waldowebdev.co.za/',
