@@ -73,9 +73,9 @@ export default function Contact() {
             <div className="flex items-center gap-3">
               <FaEnvelope className="text-gray-300 text-xl" />
               <a
-                href="mailto:waldooosthuizen1234@gmail.com"
+                href="mailto:woosthuizen.dev@gmail.com"
                 className="hover:text-orange-400 transition-colors duration-300">
-                waldooosthuizen1234@gmail.com
+                woosthuizen.dev@gmail.com
               </a>
             </div>
 
@@ -151,10 +151,10 @@ export default function Contact() {
             {status === 'sending'
               ? 'Sending...'
               : status === 'sent'
-              ? 'Message Sent!'
-              : status === 'error'
-              ? 'Error Sending'
-              : 'Send Message'}
+                ? 'Message Sent!'
+                : status === 'error'
+                  ? 'Error Sending'
+                  : 'Send Message'}
           </button>
         </motion.form>
       </div>
