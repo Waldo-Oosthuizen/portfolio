@@ -4,9 +4,17 @@ import { motion } from 'framer-motion';
 const projects = [
   {
     title: 'This Portfolio Website',
-    tech: ['PHP', 'MySQL', 'JavaScript', 'HTML5', 'CSS3'],
+    tech: [
+      'React',
+      'Vite',
+      'Tailwind CSS',
+      'Express.js',
+      'Node.js',
+      'REST API',
+      'Resend',
+    ],
     description:
-      'Designed and developed this responsive portfolio website with a custom Express.js backend for secure contact form submissions. The application uses a REST API, server-side validation, and SMTP email delivery to replace third-party email services, demonstrating end-to-end full-stack development.',
+      'Designed and developed this responsive portfolio website with a custom Express.js backend powering a secure contact form. Built a REST API with server-side validation, CORS protection, and environment-based configuration, integrating the Resend API for reliable email delivery. Deployed the frontend and backend independently to demonstrate a production-ready full-stack architecture.',
   },
   {
     title: 'Loop',
