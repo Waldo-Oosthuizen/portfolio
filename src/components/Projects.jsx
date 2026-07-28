@@ -16,24 +16,23 @@ const projects = [
     description:
       'Designed and developed this responsive portfolio website with a custom Express.js backend powering a secure contact form. Built a REST API with server-side validation, CORS protection, and environment-based configuration, integrating the Resend API for reliable email delivery. Deployed the frontend and backend independently to demonstrate a production-ready full-stack architecture.',
   },
-{
-  title: 'Loop',
-  tech: [
-    'PHP',
-    'MySQL',
-    'JavaScript',
-    'HTML5',
-    'CSS3',
-    'password hashing'
-  ,
-  'XSS prevention'
-  ],
-  description:
-    'A full-stack social event management platform built from scratch with PHP and MySQL. Users can register, authenticate, create and manage events, update profiles, search for users and events, exchange private messages, and securely reset forgotten passwords. The application emphasizes secure development through prepared statements, password hashing, CSRF protection, XSS sanitization, and session-based access control.',
-  link: 'https://loop.waldowebdev.co.za/',
-  github: 'https://github.com/Waldo-Oosthuizen/Loop',
-  buttonText: 'Live Demo',
-}
+  {
+    title: 'Loop',
+    tech: [
+      'PHP',
+      'MySQL',
+      'JavaScript',
+      'HTML5',
+      'CSS3',
+      'password hashing',
+      'XSS prevention',
+    ],
+    description:
+      'A full-stack social event management platform built from scratch with PHP and MySQL. Users can register, authenticate, create and manage events, update profiles, search for users and events, exchange private messages, and securely reset forgotten passwords. The application emphasizes secure development through prepared statements, password hashing, CSRF protection, XSS sanitization, and session-based access control.',
+    link: 'https://loop.waldowebdev.co.za/',
+    github: 'https://github.com/Waldo-Oosthuizen/Loop',
+    buttonText: 'Live Demo',
+  },
   {
     title: 'Staccato',
     tech: ['React', 'TailwindCSS', 'Firebase', 'Firestore', 'Lucide Icons'],
