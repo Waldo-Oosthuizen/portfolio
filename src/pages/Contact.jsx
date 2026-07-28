@@ -140,7 +140,6 @@ export default function Contact() {
 
         {/* Contact Form */}
         <motion.form
-          ref={formRef}
           onSubmit={sendContact}
           className="bg-[#1a1a1a] border border-gray-800 p-8 rounded-2xl shadow-lg">
           <div className="mb-4">
