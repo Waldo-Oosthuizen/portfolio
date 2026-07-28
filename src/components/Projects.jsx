@@ -6,7 +6,7 @@ const projects = [
     title: 'This Portfolio Website',
     tech: ['PHP', 'MySQL', 'JavaScript', 'HTML5', 'CSS3'],
     description:
-      'Designed and developed a responsive portfolio website with a custom Express.js backend for secure contact form submissions. The application uses a REST API, server-side validation, SMTP email delivery, and rate limiting to replace third-party email services, demonstrating end-to-end full-stack development.',
+      'Designed and developed this responsive portfolio website with a custom Express.js backend for secure contact form submissions. The application uses a REST API, server-side validation, and SMTP email delivery to replace third-party email services, demonstrating end-to-end full-stack development.',
   },
   {
     title: 'Loop',

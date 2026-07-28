@@ -1,33 +1,68 @@
-import { motion } from 'framer-motion';
-import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
-import emailjs from 'emailjs-com';
-import { useRef, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import {
+  FaEnvelope,
+  FaLinkedin,
+  FaGithub,
+  FaCheckCircle,
+  FaExclamationCircle,
+} from 'react-icons/fa';
+import { useState } from 'react';
 
 export default function Contact() {
-  const formRef = useRef();
   const [status, setStatus] = useState('idle'); // idle | sending | sent | error
+  const [feedback, setFeedback] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
-  const sendEmail = (e) => {
+  const sendContact = async (e) => {
     e.preventDefault();
+    setFeedback('');
     setStatus('sending');
 
-    emailjs
-      .sendForm(
-        'service_yribb2k', // EmailJS service ID
-        'template_jie66xl', // EmailJS template ID
-        formRef.current,
-        'axkZ4KqBBRd0IC4VN' // EmailJS public key
-      )
-      .then(
-        () => {
-          setStatus('sent');
-          formRef.current.reset();
-          setTimeout(() => setStatus('idle'), 4000);
-        },
-        () => {
-          setStatus('error');
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/contact`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            message,
+          }),
         }
       );
+
+      const data = await response.json();
+
+      // Check for error
+      if (!response.ok) {
+        throw new Error(data.message);
+      }
+
+      setFeedback(data.message);
+      setStatus('sent');
+
+      setName('');
+      setEmail('');
+      setMessage('');
+      // clear status and feedback
+      setTimeout(() => {
+        setStatus('idle');
+        setFeedback('');
+      }, 4000);
+    } catch (error) {
+      console.error(error);
+      setStatus('error');
+      setFeedback(
+        error.message === 'Failed to fetch'
+          ? 'Unable to reach the server. Please try again later.'
+          : error.message
+      );
+    }
   };
 
   return (
@@ -106,7 +141,7 @@ export default function Contact() {
         {/* Contact Form */}
         <motion.form
           ref={formRef}
-          onSubmit={sendEmail}
+          onSubmit={sendContact}
           className="bg-[#1a1a1a] border border-gray-800 p-8 rounded-2xl shadow-lg">
           <div className="mb-4">
             <label className="block text-gray-400 mb-2">Your Name</label>
@@ -114,6 +149,8 @@ export default function Contact() {
               type="text"
               name="from_name"
               placeholder="Enter your name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className="w-full p-3 rounded-lg bg-[#121212] border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-orange-400"
               required
             />
@@ -125,6 +162,8 @@ export default function Contact() {
               type="email"
               name="reply_to"
               placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full p-3 rounded-lg bg-[#121212] border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-orange-400"
               required
             />
@@ -134,6 +173,8 @@ export default function Contact() {
             <label className="block text-gray-400 mb-2">Message</label>
             <textarea
               name="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               placeholder="Write your message..."
               rows="5"
               className="w-full p-3 rounded-lg bg-[#121212] border border-gray-700 text-white resize-none focus:outline-none focus:ring-2 focus:ring-orange-400"
@@ -148,14 +189,30 @@ export default function Contact() {
                 ? 'bg-gray-600 cursor-not-allowed'
                 : 'bg-orange-500 hover:bg-orange-600 text-white'
             }`}>
-            {status === 'sending'
-              ? 'Sending...'
-              : status === 'sent'
-                ? 'Message Sent!'
-                : status === 'error'
-                  ? 'Error Sending'
-                  : 'Send Message'}
+            {status === 'sending' ? 'Sending...' : 'Send Message'}
           </button>
+          <AnimatePresence>
+            {feedback && (
+              <motion.div
+                initial={{ opacity: 0, y: -15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.3 }}
+                className={`mt-5 flex items-center gap-3 rounded-xl border p-4 ${
+                  status === 'sent'
+                    ? 'border-green-500/30 bg-green-500/10 text-green-300'
+                    : 'border-red-500/30 bg-red-500/10 text-red-300'
+                }`}>
+                {status === 'sent' ? (
+                  <FaCheckCircle className="text-xl flex-shrink-0" />
+                ) : (
+                  <FaExclamationCircle className="text-xl flex-shrink-0" />
+                )}
+
+                <p className="text-sm md:text-base">{feedback}</p>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </motion.form>
       </div>
     </section>
