@@ -33,6 +33,16 @@ const projects = [
     github: 'https://github.com/Waldo-Oosthuizen/Loop',
     buttonText: 'Live Demo',
   },
+  // {
+  //   title: 'Staccato',
+  //   tech: ['React', 'TailwindCSS', 'Firebase', 'Firestore', 'Lucide Icons'],
+  //   description:
+  //     'A real-time attendance tracker for music teachers, developed with React and Firebase. Includes Google Authentication, Firestore syncing, and a responsive UI. Currently expanding with analytics and progress-tracking features.',
+  //   link: 'https://waldo-oosthuizen.github.io/staccato/',
+  //   github: 'https://waldo-oosthuizen.github.io/staccato/',
+  //   buttonText: 'Live Demo',
+  // },
+
   {
     title: 'Loan Risk Prediction using Machine Learning',
     tech: [
