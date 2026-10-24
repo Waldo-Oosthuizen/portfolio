@@ -3,6 +3,21 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
+    title: 'Campus Event Management System',
+    tech: [
+      'Java',
+      'Object-Oriented Programming',
+      'Java Collections Framework',
+      'Multithreading',
+      'File I/O',
+      'Exception Handling',
+    ],
+    description:
+      'A Java console-based Campus Event Management System developed during the 3rd year of my BSc IT studies. The application manages campus events through role-based access control, allowing staff to create, update, and cancel events while students can register and manage their attendance. Implemented event capacity management, FIFO waitlists, and multithreading to automatically promote waitlisted students when spaces become available. Applied OOP principles, Java collections, input validation, exception handling, event searching and sorting, and file-based data persistence.',
+    github: 'https://github.com/Waldo-Oosthuizen/Java-Event-Management-system',
+  },
+
+  {
     title: 'This Portfolio Website',
     tech: [
       'React',
